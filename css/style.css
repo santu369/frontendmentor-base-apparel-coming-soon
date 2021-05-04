@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+/* variables */
+/* default */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Josefin Sans", sans-serif;
+  color: #ce9797;
+  min-width: 240px;
+  min-height: 100vh;
+}
+
+.main {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: 88px auto 1fr;
+}
+.main .header {
+  background: linear-gradient(135deg, white, #fff5f5);
+  min-height: 55px;
+  padding: 2em 0 2em 2em;
+}
+.main .header__logo img {
+  height: 20px;
+  width: 105px;
+}
+.main__imgwrapper img {
+  width: 100%;
+  display: block;
+}
+.main .section {
+  min-width: 200px;
+  padding: 4em 2.5em 2.5em 2em;
+  background: linear-gradient(135deg, #fefaf9, #fff3f3);
+  text-align: center;
+}
+.main .section__header {
+  font-size: 2.6rem;
+  text-transform: uppercase;
+  line-height: 0.8em;
+  letter-spacing: 0.25em;
+  font-weight: 300;
+  margin-bottom: 0.3em;
+}
+.main .section__special {
+  display: block;
+  color: #413a3a;
+  line-height: 1.2em;
+  font-weight: 600;
+}
+.main .section__content {
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 1.5em;
+  margin-bottom: 2.25em;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.main .section .form {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.main .section .form .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.main .section .form__input {
+  font-size: 1rem;
+  display: inline-block;
+  padding: 1em 1.75em;
+  border-radius: 2em;
+  width: 100%;
+  outline: none;
+  border: 1px solid #ce9797;
+  background: transparent;
+  font-family: inherit;
+}
+.main .section .form__input::placeholder {
+  color: #ce9797;
+}
+.main .section .form__submit {
+  position: absolute;
+  right: -5px;
+  top: 0;
+  width: 68px;
+  height: 50px;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  object-fit: none;
+  border-radius: 2em;
+}
+
+@media only screen and (min-width: 1126px) {
+  body {
+    font-size: 20px;
+    max-width: 1440px;
+    display: flex;
+    min-width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main {
+    grid-template-areas: "section image" "section image";
+    grid-template-rows: 100px 1fr;
+    max-height: 800px;
+    min-height: 600px;
+  }
+  .main .header {
+    position: absolute;
+    grid-area: header;
+    max-height: 105px;
+    padding: 3em 0 0 8em;
+    background: none;
+  }
+  .main .header__logo {
+    display: block;
+    width: 158px;
+  }
+  .main .header__logo img {
+    height: 100%;
+    width: 100%;
+  }
+  .main__imgwrapper {
+    grid-area: image;
+    max-height: 800px;
+  }
+  .main__imgwrapper img {
+    max-height: 800px;
+    min-width: 610px;
+  }
+  .main .section {
+    grid-area: section;
+    background: url(../images/bg-pattern-desktop.svg);
+    max-height: 800px;
+    max-width: 830px;
+    width: 100%;
+    padding: 28% 25% 19.5% 20%;
+    font-size: 2rem;
+  }
+  .main .section__header {
+    font-size: 4rem;
+    text-align: left;
+  }
+  .main .section__content {
+    font-size: 1rem;
+    margin-right: 10px;
+    text-align: left;
+    margin-bottom: 2em;
+    line-height: 1.75em;
+  }
+  .main .section .form {
+    width: 90%;
+  }
+  .main .section .form__input {
+    font-size: 1.2rem;
+  }
+  .main .section .form__submit {
+    width: 100px;
+    right: -30px;
+    height: 60px;
+    border-radius: 3em;
+    box-shadow: 3px 3px 19px 0 #ce9797;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
