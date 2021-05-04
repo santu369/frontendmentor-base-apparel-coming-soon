@@ -13,8 +13,12 @@ body {
   font-size: 15px;
   font-family: "Josefin Sans", sans-serif;
   color: #ce9797;
-  min-width: 240px;
   min-height: 100vh;
+  max-width: 500px;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main {
@@ -59,9 +63,8 @@ body {
   font-weight: 400;
   font-size: 0.9rem;
   line-height: 1.5em;
-  margin-bottom: 2.25em;
+  margin: 0 auto 2.25em auto;
   max-width: 400px;
-  margin: 0 auto;
 }
 .main .section .form {
   position: relative;
@@ -92,6 +95,12 @@ body {
 .main .section .form__input::placeholder {
   color: #ce9797;
 }
+.main .section .form__input:focus {
+  box-shadow: 3px 3px 19px 0 #ce9797;
+}
+.main .section .form .error-border {
+  border: 2px solid #f96262;
+}
 .main .section .form__submit {
   position: absolute;
   right: -5px;
@@ -101,17 +110,50 @@ body {
   background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
   object-fit: none;
   border-radius: 2em;
+  outline: none;
+  box-shadow: 3px 3px 19px 0 #ce9797;
+}
+.main .section .form__submit:focus, .main .section .form__submit:hover {
+  box-shadow: 5px 5px 25px 2px #ce9797;
+  background: #f8cece;
+}
+.main .section .form__submit:active {
+  transition: all 100ms ease-out;
+  transform: scale(0.9);
+  right: -15px;
+}
+.main .section .form .show {
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+}
+.main .section .form__error--msg {
+  opacity: 0;
+  position: absolute;
+  font-size: 0.9rem;
+  bottom: -2rem;
+  color: #f96262;
+}
+.main .section .form__error--img {
+  opacity: 0;
+  position: absolute;
+  font-size: 0.8rem;
+  right: 5rem;
+  top: 1.1em;
+  color: #f96262;
+}
+.main .section .form__success--msg {
+  opacity: 0;
+  position: absolute;
+  font-size: 1rem;
+  bottom: -3.5em;
+  color: #00cc44;
+  text-align: left;
 }
 
-@media only screen and (min-width: 1126px) {
+@media only screen and (min-width: 1246px) {
   body {
     font-size: 20px;
     max-width: 1440px;
-    display: flex;
-    min-width: 100%;
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
   }
 
   .main {
@@ -149,7 +191,7 @@ body {
     max-height: 800px;
     max-width: 830px;
     width: 100%;
-    padding: 28% 25% 19.5% 20%;
+    padding: 28% 22% 19.5% 20%;
     font-size: 2rem;
   }
   .main .section__header {
@@ -158,23 +200,30 @@ body {
   }
   .main .section__content {
     font-size: 1rem;
-    margin-right: 10px;
+    margin: 0 0 2em 0;
     text-align: left;
-    margin-bottom: 2em;
     line-height: 1.75em;
+    max-width: 500px;
   }
   .main .section .form {
     width: 90%;
+    margin: 0;
   }
   .main .section .form__input {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .main .section .form__submit {
     width: 100px;
     right: -30px;
+    top: -5px;
     height: 60px;
     border-radius: 3em;
-    box-shadow: 3px 3px 19px 0 #ce9797;
+  }
+  .main .section .form__submit:active {
+    right: -40px;
+  }
+  .main .section .form__error--img {
+    top: 1em;
   }
 }
 
