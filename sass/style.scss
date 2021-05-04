@@ -45,8 +45,10 @@ body {
   max-width: 500px;
   min-width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  \background: linear-gradient($grad-button);
 }
 
 .main {
@@ -73,7 +75,7 @@ body {
   .section {
     min-width: 200px;
     // min-height: 464px;
-    padding: 4em 2.5em 2.5em 2em;
+    padding: 4em 3.5em 2.5em 2em;
     background: linear-gradient($grad-main);
     text-align: center;
     &__header {
@@ -178,12 +180,30 @@ body {
         &--msg {
           opacity: 0;
           position: absolute;
-          font-size: 1rem;
+          font-size: 0.8rem;
           bottom: -3.5em;
           color: $success-text;
           text-align: left;
         }
       }
+    }
+  }
+}
+
+/* footer */
+.attribution {
+  font-size: 0.75rem;
+  line-height: 20px;
+  text-align: center;
+  color: $prim-desat-red;
+  margin-top: 1rem;
+  font-weight: $font-medium;
+  a {
+    text-decoration: none;
+    color: $neu-gray;
+    font-weight: $font-bold;
+    &:hover {
+      color: $prim-soft-red;
     }
   }
 }
