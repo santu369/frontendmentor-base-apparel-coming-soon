@@ -17,12 +17,12 @@ $font-light: 300;
 $font-medium: 400;
 $font-bold: 600;
 
-$main-bg: "../images/bg-pattern-deskyop.svg";
+$main-bg: "../images/bg-pattern-desktop.svg";
 
 $success-text: hsl(140, 100%, 40%);
 $submit-active: hsl(359, 76%, 89%);
 
-$breakpoint: 1170px;
+$breakpoint: 1246px;
 
 *,
 *::before,
@@ -37,8 +37,7 @@ body {
   font-family: $font-family;
   color: $prim-desat-red;
   min-height: 100vh;
-  max-width: 500px;
-  min-width: 100%;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -206,10 +205,11 @@ body {
 
 /* media queries */
 
-@media only screen and (min-width: 1246px) {
+@media only screen and (min-width: $breakpoint) {
   body {
     font-size: $font-size-large;
     max-width: 1440px;
+    min-width: 100%;
   }
   .main {
     grid-template-areas:
@@ -243,7 +243,7 @@ body {
     }
     .section {
       grid-area: section;
-      background: url(../images/bg-pattern-desktop.svg);
+      background: url($main-bg);
       max-height: 800px;
       max-width: 830px;
       width: 100%;
