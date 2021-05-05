@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
 /* variables */
-/* default */
 *,
 *::before,
 *::after {
@@ -170,6 +169,7 @@ body {
   color: #f96262;
 }
 
+/* media queries */
 @media only screen and (min-width: 1246px) {
   body {
     font-size: 20px;
