@@ -51,6 +51,7 @@ const resetError = () => {
 };
 
 const setSuccess = () => {
+  emailEl.value = "";
   successMsgEl.classList.add("show");
   errorImgEl.classList.remove("show");
   errorMsgEl.classList.remove("show");
