@@ -205,7 +205,7 @@ body {
 @media only screen and (min-width: $breakpoint) {
   body {
     font-size: $font-size-large;
-    max-width: 1440px;
+    max-width: 1600px;
     justify-content: center;
     min-width: 100%;
   }
@@ -216,11 +216,12 @@ body {
     grid-template-rows: 100px 1fr;
     max-height: 800px;
     min-height: 600px;
+    grid-template-columns: 1fr auto;
     .header {
       position: absolute;
       grid-area: header;
       max-height: 105px;
-      padding: 3em 0 0 8em;
+      padding: 3.3em 0 0 8.2em;
       background: none;
       &__logo {
         display: block;
@@ -243,9 +244,8 @@ body {
       grid-area: section;
       background: url($main-bg);
       max-height: 800px;
-      max-width: 830px;
       width: 100%;
-      padding: 28% 22% 19.5% 20%;
+      padding: 29% 28% 19.5% 20%;
       font-size: 2rem;
       &__header {
         font-size: 4rem;
@@ -253,7 +253,7 @@ body {
       }
       &__content {
         font-size: 1rem;
-        margin: 0 0 2em 0;
+        margin: -0.2em 0 2.5em 0;
         text-align: left;
         line-height: 1.75em;
         max-width: 500px;
@@ -266,7 +266,7 @@ body {
         }
         &__submit {
           width: 100px;
-          right: -30px;
+          right: -55px;
           top: -5px;
           height: 60px;
           border-radius: 3em;
