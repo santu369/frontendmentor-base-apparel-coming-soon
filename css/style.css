@@ -16,14 +16,12 @@ body {
   min-width: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background: linear-gradient(135deg, #fefaf9, #fff3f3);
 }
 
 .main {
   display: grid;
-  min-height: 100vh;
   grid-template-rows: 88px auto 1fr;
 }
 .main .header {
@@ -173,6 +171,7 @@ body {
   body {
     font-size: 20px;
     max-width: 1440px;
+    justify-content: center;
     min-width: 100%;
   }
 
